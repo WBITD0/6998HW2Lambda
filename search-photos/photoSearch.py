@@ -66,7 +66,7 @@ def lambda_handler(event, context):
         response['statusCode'] = 400
         response['body'] = json.dumps("transcribe failed to finish its job in 60s")
         return response
-        
+    print("dummy test")
     print('Query:', query)
     lex = boto3.client('lex-runtime')
     lex_response = lex.post_text(
