@@ -22,6 +22,7 @@ def lambda_handler(event, context):
 
             return response
     input_type = event["queryStringParameters"]['q'].split("/")[-1]
+    print("pipelineTest")
     query = "/".join(event["queryStringParameters"]['q'].split("/")[:-1])
     print(query)
     if input_type not in ["audio","text"]:
