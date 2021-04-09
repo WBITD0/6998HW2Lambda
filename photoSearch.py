@@ -17,6 +17,7 @@ def lambda_handler(event, context):
     #response["headers"] = {"Access-Control-Allow-Origin": "*"}
     
     print(event)
+    print("pipeline test")
     if event["httpMethod"].upper() == "OPTIONS":
             response['statusCode'] = 200
 
